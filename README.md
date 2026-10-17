@@ -57,3 +57,28 @@
 
 ФИО: Тарланов Аслан Эрзиманович
 Группа: ЭФБО-03-25
+
+## Используемый фреймворк
+
+Bootstrap 5.3.8.
+
+## Способ подключения
+
+Bootstrap подключён через CDN (jsDelivr): CSS в `<head>`, JS Bundle перед `</body>`.
+Файл `css/custom.css` подключается после Bootstrap.
+
+## Реализованные компоненты
+
+- `navbar` (с выпадающим меню `dropdown`);
+- `card`;
+- `btn`;
+- `badge`;
+- `alert`;
+- `modal`;
+- `form-control`, `form-select`, `input-group`, `form-check`;
+- `accordion`;
+- `breadcrumb`, `table`.
+
+## Ссылка на опубликованный проект
+
+GitHub Pages: https://shrtgrl.github.io/kr2-bootstrap-shop/
