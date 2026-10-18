@@ -82,3 +82,12 @@ Bootstrap подключён через CDN (jsDelivr): CSS в `<head>`, JS Bund
 ## Ссылка на опубликованный проект
 
 GitHub Pages: https://shrtgrl.github.io/kr2-bootstrap-shop/
+
+## Способ подключения
+
+Bootstrap подключён локально, без CDN. Файлы фреймворка размещены в папке `vendor/bootstrap/`:
+
+- `vendor/bootstrap/css/bootstrap.min.css`;
+- `vendor/bootstrap/js/bootstrap.bundle.min.js`.
+
+Файл `css/custom.css` подключается после Bootstrap.
