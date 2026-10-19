@@ -36,6 +36,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="order.html">Заявка</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Контакты</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -53,6 +56,12 @@
         </nav>
     </header>
     <main class="container my-5 flex-grow-1">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li li class="breadcrumb-item active" aria-current="page">Заявка</li>
+            </ol>
+        </nav>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="card shadow-sm">
@@ -87,17 +96,33 @@
                                 </div>
 
                                 <div class="col-12 col-md-6">
-                                    <label for="order-product" class="form-label">Товар</label>
-                                    <select id="order-product" name="product" class="form-select">
-                                        <option selected>Выберите товар</option>
-                                        <option value="product-1">Товар 1</option>
-                                        <option value="product-2">Товар 2</option>
-                                        <option value="product-3">Товар 3</option>
-                                        <option value="product-1">Товар 1</option>
-                                        <option value="product-2">Товар 2</option>
-                                        <option value="product-3">Товар 3</option>
-                                        <option value="product-1">Товар 1</option>
-                                        <option value="product-2">Товар 2</option>
+                                    <label for="order-product" class="form-label">Товар *</label>
+                                    <select id="order-product" name="product" class="form-select" required>
+                                        <option value="" selected disabled>Выберите модель</option>
+                                        <option value="onitsuka-tiger">Onitsuka Tiger Burnt Olive</option>
+                                        <option value="adidas-liverpool">adidas Liverpool</option>
+                                        <option value="red-Shoes">Красные бархатные лоферы</option>
+                                        <option value="nike-Cortez">Nike Cortez</option>
+                                        <option value="crocs-Shrek">Crocs Classic Clog DreamWorks Shrek</option>
+                                        <option value="converse-Tyler">Tyler, The Creator x Converse 1908 Jogger</option>
+                                        <option value="converse-X-Golf">Converse x GOLF le FLEUR* Pro Leather</option>
+                                        <option value="Adilette-Aqua-Slides-Blue">Adidas Adilette Aqua Slides</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="order-size" class="form-label">Размер *</label>
+                                    <select id="order-size" name="size" class="form-select" required>
+                                        <option value="" selected disabled>Выберите размер</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
                                     </select>
                                 </div>
 

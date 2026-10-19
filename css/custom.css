@@ -60,3 +60,32 @@ body {
     --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(227, 69, 37, 0.25);
     --bs-accordion-btn-active-icon: var(--bs-accordion-btn-icon);
 }
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: #E34525;
+    box-shadow: 0 0 0 0.25rem rgba(227, 69, 37, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #E34525;
+    border-color: #E34525;
+}
+
+@media (min-width: 992px) {
+    .filter-sticky {
+        position: sticky;
+        top: 1rem;
+    }
+}
+
+.carousel-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 20, 16, 0.6);
+    border-radius: 0.5rem;
+}
