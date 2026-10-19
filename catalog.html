@@ -17,15 +17,8 @@
                     <img src="images/logo.svg" alt="OnSight" height="44">
                 </a>
 
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Переключить навигацию"
-                >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -43,14 +36,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="order.html">Заявка</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Контакты</a>
+                        </li>
                         <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Дополнительно
                             </a>
                             <ul class="dropdown-menu">
@@ -66,6 +57,12 @@
     </header>
 
     <main class="container my-5 flex-grow-1">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li li class="breadcrumb-item active" aria-current="page">Каталог</li>
+            </ol>
+        </nav>
         <div class="alert alert-info" role="alert">
             Бесплатная доставка и примерка по Москве. Не подошёл размер — обменяем
         </div>
@@ -78,187 +75,274 @@
         </div>
 
         <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-primary align-self-start mb-2">Новинка</span>
-                    <h3 class="h5">Onitsuka Tiger Burnt Olive</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/OnitsukaTigerOlive.jpeg" class="object-fit-cover rounded"
-                            alt="Кроссовки Onitsuka Tiger Burnt Olive">
-                    </div>
-                    <p class="text-muted">
-                        Лёгкие ретро-кроссовки в оливковом цвете с белыми полосами Tiger.
-                        Нейлон и замша, тонкая подошва, в стиле беговой обуви 70-х.
-                    </p>
-                    <p class="fw-bold mb-3 mt-auto">18 000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-dark align-self-start mb-2">Хит</span>
-                    <h3 class="h5">adidas Liverpool</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/adidasLiverpool.webp" class="object-fit-cover rounded"
-                            alt="Кроссовки adidas Liverpool">
-                    </div>
-                    <p class="text-muted">
-                        Модель из серии City Series в зелёной замше с золотыми полосками и тёмной
-                        резиновой подошвой. Терраса и футбольная классика в одном.
-                    </p>
-                    <p class="fw-bold mb-3 mt-auto">90 000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <aside class="col-12 col-lg-3">
+                <button class="btn btn-outline-primary w-100 d-lg-none mb-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#filters" aria-expanded="false" aria-controls="filters">
+                    Фильтры
+                </button>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-danger align-self-start mb-2">Скидка</span>
-                    <h3 class="h5">Красные бархатные лоферы</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/redShoes.jpg" class="object-fit-cover rounded" alt="Красные бархатные лоферы">
-                    </div>
-                    <p class="text-muted">
-                        Бархатные лоферы с золотой пряжкой-трензелем. Подходят и к костюму, и
-                        к джинсам, когда хочется выделиться.
-                    </p>
-                    <p class="fw-bold mb-3 mt-auto">899 990 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <div class="collapse d-lg-block" id="filters">
+                    <div class="card shadow-sm p-4 filter-sticky">
+                        <h2 class="h5 mb-3">Фильтры</h2>
+                        <form>
+                            <div class="mb-4">
+                                <h3 class="h6">Бренд</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand-nike">
+                                    <label class="form-check-label" for="brand-nike">Nike</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand-adidas">
+                                    <label class="form-check-label" for="brand-nike">Adidas</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand-converse">
+                                    <label class="form-check-label" for="brand-nike">Converse</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand-onitsukaTiger">
+                                    <label class="form-check-label" for="brand-nike">Onitsuka Tiger</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="brand-crocs">
+                                    <label class="form-check-label" for="brand-nike">Crocs</label>
+                                </div>
+                            </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-secondary align-self-start mb-2">Классика</span>
-                    <h3 class="h5">Nike Cortez</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/nikeCortez.avif" class="object-fit-cover rounded" alt="Кроссовки Nike Cortez">
-                    </div>
-                    <p class="card-text text-muted">
-                        Беговая модель 1972 года, с которой начиналась история Nike. Узкий силуэт, нейлоновый верх и
-                        контрастный свуш.
-                    </p>
-                    <p class="fw-bold mt-auto mb-3">9 990 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
+                            <div class="mb-4">
+                                <h3 class="h6">Тип</h3>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="type" id="type-all" checked>
+                                    <label class="form-check-label" for="type-all">Все</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="type" id="type-sneakers">
+                                    <label class="form-check-label" for="type-all">Кроссовки</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="type" id="type-loafers">
+                                    <label class="form-check-label" for="type-all">Лоферы</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="type" id="type-saboo">
+                                    <label class="form-check-label" for="type-all">Сабо</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="type" id="type-slides">
+                                    <label class="form-check-label" for="type-all">Шлёпанцы</label>
+                                </div>
+                            </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-primary align-self-start mb-2">Коллаборация</span>
-                    <h3 class="h5">Crocs Classic Clog DreamWorks Shrek</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/crocsShrek.jpg" class="object-fit-contain rounded"
-                            alt="Сабо Crocs Classic Clog DreamWorks Shrek">
-                    </div>
-                    <p class="card-text text-muted">
-                        Классические Crocs в болотно-зелёном цвете Шрека из коллаборации с DreamWorks. Лёгкие, мягкие, с
-                        вентиляцией.
-                    </p>
-                    <p class="fw-bold mt-auto mb-3">7 490 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
+                            <div class="mb-4">
+                                <h3 class="h6">Цена, руб.</h3>
+                                <div class="d-flex gap-2">
+                                    <input type="number" class="form-control" placeholder="от" aria-label="Цена от">
+                                    <input type="number" class="form-control" placeholder="до" aria-label="Цена до">
+                                </div>
+                            </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-danger align-self-start mb-2">Лимитка</span>
-                    <h3 class="h5">Tyler, The Creator x Converse 1908 Jogger</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/converseTyler.avif" class="object-fit-cover rounded"
-                            alt="Кроссовки Tyler, The Creator x Converse 1908 Jogger">
-                    </div>
-                    <p class="card-text text-muted">
-                        Модель из коллекции 1908, в которой Tyler, The Creator переосмыслил архивные силуэты Converse.
-                        Беговой профиль в стиле начала прошлого века и мягкие цвета.
-                    </p>
-                    <p class="fw-bold mt-auto mb-3">14 990 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="button">Применить</button>
+                                <button class="btn btn-outline-secondary" type="reset">Сбросить</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
+            </aside>
 
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-primary align-self-start mb-2">Новинка</span>
-                    <h3 class="h5">Converse x GOLF le FLEUR* Pro Leather</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/converseXGolf.webp" class="object-fit-cover rounded"
-                            alt="Кроссовки Converse x GOLF le FLEUR* Pro Leather">
+            <div class="col-12 col-lg-9">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-primary align-self-start mb-2">Новинка</span>
+                            <h3 class="h5">Onitsuka Tiger Burnt Olive</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/OnitsukaTigerOlive.jpeg" class="object-fit-cover rounded"
+                                    alt="Кроссовки Onitsuka Tiger Burnt Olive">
+                            </div>
+                            <p class="text-muted">
+                                Лёгкие ретро-кроссовки в оливковом цвете с белыми полосами Tiger.
+                                Нейлон и замша, тонкая подошва, в стиле беговой обуви 70-х.
+                            </p>
+                            <p class="fw-bold mb-3 mt-auto">18 000 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <p class="card-text text-muted">
-                        Лимитированные низкие кроссовки, созданные в коллаборации Converse и Tyler, The Creator. 
-                        Классический баскетбольный силуэт Pro Leather переосмыслен в фирменной эстетике GOLF le FLEUR.
-                    </p>
-                    <p class="fw-bold mt-auto mb-3">10 000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="card shadow-sm h-100 p-4 d-flex flex-column">
-                    <span class="badge bg-secondary align-self-start mb-2">Классика</span>
-                    <h3 class="h5">Adidas Adilette Aqua Slides</h3>
-                    <div class="ratio ratio-4x3 mb-3">
-                        <img src="images/AdiletteAquaSlidesBlue.avif" class="object-fit-cover rounded"
-                            alt="Тапки Adidas Adilette Aqua Slides">
-                    </div>
-                    <p class="card-text text-muted">
-                        Лёгкие шлёпанцы adidas из цельного EVA-материала, предназначенные для бассейна, душа, пляжа или отдыха дома.
-                        Они быстро сохнут, имеют мягкую амортизирующую подошву; цвет тёмно-синий с белыми деталями.
-                    </p>
-                    <p class="fw-bold mt-auto mb-3">2 000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#orderModal">
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
 
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-dark align-self-start mb-2">Хит</span>
+                            <h3 class="h5">adidas Liverpool</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/adidasLiverpool.webp" class="object-fit-cover rounded"
+                                    alt="Кроссовки adidas Liverpool">
+                            </div>
+                            <p class="text-muted">
+                                Модель из серии City Series в зелёной замше с золотыми полосками и тёмной
+                                резиновой подошвой. Терраса и футбольная классика в одном.
+                            </p>
+                            <p class="fw-bold mb-3 mt-auto">90 000 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-danger align-self-start mb-2">Скидка</span>
+                            <h3 class="h5">Красные бархатные лоферы</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/redShoes.jpg" class="object-fit-cover rounded"
+                                    alt="Красные бархатные лоферы">
+                            </div>
+                            <p class="text-muted">
+                                Бархатные лоферы с золотой пряжкой-трензелем. Подходят и к костюму, и
+                                к джинсам, когда хочется выделиться.
+                            </p>
+                            <p class="fw-bold mb-3 mt-auto">899 990 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-secondary align-self-start mb-2">Классика</span>
+                            <h3 class="h5">Nike Cortez</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/nikeCortez.avif" class="object-fit-cover rounded"
+                                    alt="Кроссовки Nike Cortez">
+                            </div>
+                            <p class="card-text text-muted">
+                                Беговая модель 1972 года, с которой начиналась история Nike. Узкий силуэт, нейлоновый
+                                верх и
+                                контрастный свуш.
+                            </p>
+                            <p class="fw-bold mt-auto mb-3">9 990 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-primary align-self-start mb-2">Коллаборация</span>
+                            <h3 class="h5">Crocs Classic Clog DreamWorks Shrek</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/crocsShrek.jpg" class="object-fit-contain rounded"
+                                    alt="Сабо Crocs Classic Clog DreamWorks Shrek">
+                            </div>
+                            <p class="card-text text-muted">
+                                Классические Crocs в болотно-зелёном цвете Шрека из коллаборации с DreamWorks. Лёгкие,
+                                мягкие, с
+                                вентиляцией.
+                            </p>
+                            <p class="fw-bold mt-auto mb-3">7 490 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-danger align-self-start mb-2">Лимитка</span>
+                            <h3 class="h5">Tyler, The Creator x Converse 1908 Jogger</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/converseTyler.avif" class="object-fit-cover rounded"
+                                    alt="Кроссовки Tyler, The Creator x Converse 1908 Jogger">
+                            </div>
+                            <p class="card-text text-muted">
+                                Модель из коллекции 1908, в которой Tyler, The Creator переосмыслил архивные силуэты
+                                Converse.
+                                Беговой профиль в стиле начала прошлого века и мягкие цвета.
+                            </p>
+                            <p class="fw-bold mt-auto mb-3">14 990 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-primary align-self-start mb-2">Новинка</span>
+                            <h3 class="h5">Converse x GOLF le FLEUR* Pro Leather</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/converseXGolf.webp" class="object-fit-cover rounded"
+                                    alt="Кроссовки Converse x GOLF le FLEUR* Pro Leather">
+                            </div>
+                            <p class="card-text text-muted">
+                                Лимитированные низкие кроссовки, созданные в коллаборации Converse и Tyler, The Creator.
+                                Классический баскетбольный силуэт Pro Leather переосмыслен в фирменной эстетике GOLF le
+                                FLEUR.
+                            </p>
+                            <p class="fw-bold mt-auto mb-3">10 000 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card shadow-sm h-100 p-4 d-flex flex-column">
+                            <span class="badge bg-secondary align-self-start mb-2">Классика</span>
+                            <h3 class="h5">Adidas Adilette Aqua Slides</h3>
+                            <div class="ratio ratio-4x3 mb-3">
+                                <img src="images/AdiletteAquaSlidesBlue.avif" class="object-fit-cover rounded"
+                                    alt="Тапки Adidas Adilette Aqua Slides">
+                            </div>
+                            <p class="card-text text-muted">
+                                Лёгкие шлёпанцы adidas из цельного EVA-материала, предназначенные для бассейна, душа,
+                                пляжа или отдыха дома.
+                                Они быстро сохнут, имеют мягкую амортизирующую подошву; цвет тёмно-синий с белыми
+                                деталями.
+                            </p>
+                            <p class="fw-bold mt-auto mb-3">2 000 руб.</p>
+                            <div class="d-flex gap-2">
+                                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#orderModal">
+                                    Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
@@ -276,7 +360,7 @@
                         Оставьте контактные данные, и менеджер свяжется с вами.
                     </p>
 
-                    <form>
+                    <form id="quickOrderForm">
                         <div class="mb-3">
                             <label for="modal-name" class="form-label">Имя</label>
                             <input id="modal-name" type="text" class="form-control" required>
@@ -300,7 +384,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                         Закрыть
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <button type="submit" form="quickOrderForm" class="btn btn-primary">
                         Отправить
                     </button>
                 </div>
